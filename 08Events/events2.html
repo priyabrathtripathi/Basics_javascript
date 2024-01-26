@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Code with coffe</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayarjun =()=>{
+        console.log("arjun")
+    }
+    const changetest=()=>{
+        document.querySelector('h1').innerHTML="Best Js series"
+    }
+    const changeme =setTimeout(changetest,4000)
+    // setTimeout( sayarjun,2000)
+
+    //stop the event before it gets executed
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearTimeout(changeme)
+        console.log("Stopped")
+    })
+    
+</script>
+</html>
